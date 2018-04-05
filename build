@@ -1,0 +1,12 @@
+#!/bin/bash
+
+## Exit immediately on error.
+set -e
+
+# Echo to console.
+set -x
+
+docker build \
+  --tag sia-image \
+  .
+
