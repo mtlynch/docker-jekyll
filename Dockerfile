@@ -10,6 +10,13 @@ RUN apt-get update && \
 # Install bundler.
 RUN gem install bundler
 
+# Clean up.
+RUN rm -rf /var/lib/apt/lists/* && \
+    rm -Rf /usr/share/doc && \
+    rm -Rf /usr/share/man && \
+    apt-get autoremove -y && \
+    apt-get clean
+
 # Set default locale for the environment
 ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8
