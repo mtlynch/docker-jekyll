@@ -7,6 +7,6 @@ set -e
 set -x
 
 docker build \
-  --tag sia-image \
+  --tag sia-jekyll \
   .
 
